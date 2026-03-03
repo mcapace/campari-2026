@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Campari_2026_Full_Program (2).html" }
+  ]
+}
