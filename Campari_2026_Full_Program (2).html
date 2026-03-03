@@ -631,7 +631,33 @@ tbody td.c { text-align: center; }
 }
 .doc-footer span { font-size: 8.5px; color: var(--gray-md); letter-spacing: 0.05em; }
 
+/* ── Print / Save as PDF button (hidden when printing) ── */
+.print-pdf-btn {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  background: #C8102E;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(200, 16, 46, 0.4);
+  transition: background 0.2s, transform 0.1s;
+}
+.print-pdf-btn:hover {
+  background: #8B0000;
+}
+.print-pdf-btn:active {
+  transform: scale(0.98);
+}
+
 @media print {
+  .no-print { display: none !important; }
   body { background: white; }
   .page { margin: 0; box-shadow: none; width: 100%; }
   @page { size: 11in 8.5in; margin: 0.35in 0.4in; }
@@ -713,6 +739,7 @@ tbody td.c { text-align: center; }
 </style>
 </head>
 <body>
+<button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="Open print dialog to save as PDF">Print / Save as PDF</button>
 <div class="page">
 
 <!-- ══════════════════════════════════════════
