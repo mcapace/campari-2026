@@ -31,7 +31,7 @@
   --brand-category:    #5A5A5A;
   /* Calendar block backgrounds (distinct from all brand legend colors) */
   --cal-confirmed-bg:  #475569;
-  --cal-tbd-bg:        #64748B;
+  --cal-tbd-bg:        #6B5D52;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -268,7 +268,7 @@ tbody td.c { text-align: center; }
   display: grid;
   grid-template-columns: 172px repeat(8, 1fr);
   border-bottom: 1px solid var(--rule);
-  min-height: 70px;
+  min-height: 84px;
   break-inside: avoid;
   page-break-inside: avoid;
 }
@@ -294,7 +294,20 @@ tbody td.c { text-align: center; }
   justify-content: center;
 }
 .crm:last-child { border-right: none; }
-.blk { border-radius: 2px; padding: 6px 8px; line-height: 1.35; border-left: 4px solid rgba(0,0,0,0.3); min-height: 52px; position: relative; }
+.crm { min-height: 82px; }
+.blk {
+  border-radius: 2px;
+  padding: 6px 8px;
+  line-height: 1.35;
+  border-left: 4px solid rgba(0,0,0,0.3);
+  height: 76px;
+  min-height: 76px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
 .blk.c { background: var(--cal-confirmed-bg); }
 .blk.t { background: var(--cal-tbd-bg); }
 /* Brand color stripe on calendar blocks (single brand) */
