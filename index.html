@@ -194,7 +194,7 @@ body {
   letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
 }
-.card.tbd .ct { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--tbd); font-style: italic; font-weight: 400; font-variant-numeric: normal; }
+.card.tbd .ct { font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--tbd); letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
 .card .cn2 { font-size: 8px; color: var(--gray-md); margin-top: 5px; }
 
 /* ── DETAIL TABLE ── */
@@ -337,6 +337,7 @@ tbody td.c { text-align: center; }
   align-items: center;
 }
 .li { display: flex; align-items: center; gap: 7px; font-size: 9px; color: var(--gray-md); }
+.li.li-tbd { color: #5C4A3D; }
 .ls { width: 14px; height: 14px; border-radius: 2px; flex-shrink: 0; }
 .ls.c { background: var(--red); }
 .ls.t { background: var(--tbd); }
@@ -447,7 +448,7 @@ tbody td.c { text-align: center; }
   font-family: 'Playfair Display', serif;
   font-size: 28px;
   font-weight: 600;
-  color: var(--red);
+  color: #FFFFFF !important;
   letter-spacing: -0.01em;
 }
 .stat-item .sl { font-size: 8.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #666; margin-top: 4px; }
@@ -950,7 +951,7 @@ tbody td.c { text-align: center; }
 </div>
 <div class="legend">
   <div class="li"><div class="ls" style="background:var(--cal-confirmed-bg);"></div>Confirmed placement</div>
-  <div class="li"><div class="ls" style="background:var(--cal-tbd-bg);"></div>Budgeted · scheduling TBD</div>
+  <div class="li li-tbd"><div class="ls" style="background:var(--cal-tbd-bg);"></div>Budgeted · scheduling TBD</div>
   <span style="color:var(--gray-md);font-size:8px;">|</span>
   <div class="li"><div class="ls" style="background:var(--brand-aperol);"></div>Aperol</div>
   <div class="li"><div class="ls" style="background:var(--brand-campari);"></div>Campari</div>
