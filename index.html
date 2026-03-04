@@ -294,10 +294,10 @@ tbody td.c { text-align: center; }
   justify-content: center;
 }
 .crm:last-child { border-right: none; }
-.blk { border-radius: 2px; padding: 6px 8px; line-height: 1.35; border-left: 4px solid rgba(0,0,0,0.3); min-height: 52px; }
+.blk { border-radius: 2px; padding: 6px 8px; line-height: 1.35; border-left: 4px solid rgba(0,0,0,0.3); min-height: 52px; position: relative; }
 .blk.c { background: var(--cal-confirmed-bg); }
 .blk.t { background: var(--cal-tbd-bg); }
-/* Brand color stripe on calendar blocks */
+/* Brand color stripe on calendar blocks (single brand) */
 .blk.brand-aperol      { border-left-color: var(--brand-aperol); }
 .blk.brand-campari     { border-left-color: var(--brand-campari); }
 .blk.brand-courvoisier { border-left-color: var(--brand-courvoisier); }
@@ -306,6 +306,19 @@ tbody td.c { text-align: center; }
 .blk.brand-wildturkey  { border-left-color: var(--brand-wildturkey); }
 .blk.brand-corporate   { border-left-color: var(--brand-corporate); }
 .blk.brand-category    { border-left-color: var(--brand-category); }
+/* Multi-brand: two-tone stripe (top = first brand, bottom = second brand) */
+.blk.brand-multi { border-left: none; }
+.blk.brand-multi::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  border-radius: 2px 0 0 2px;
+}
+.blk.brands-gm-aperol::before { background: linear-gradient(to bottom, var(--brand-grandmarnier) 50%, var(--brand-aperol) 50%); }
+.blk.brands-gm-espolon::before { background: linear-gradient(to bottom, var(--brand-grandmarnier) 50%, var(--brand-espolon) 50%); }
+.blk.brands-espolon-wt::before { background: linear-gradient(to bottom, var(--brand-espolon) 50%, var(--brand-wildturkey) 50%); }
+.blk.brands-espolon-gm::before { background: linear-gradient(to bottom, var(--brand-espolon) 50%, var(--brand-grandmarnier) 50%); }
 .blk .bb { font-weight: 600; font-size: 8.5px; color: rgba(255,255,255,0.95); display: block; }
 .blk .bf { font-size: 7px; color: rgba(255,255,255,0.8); display: block; margin-top: 2px; line-height: 1.25; }
 .blk .ba { font-size: 8px; color: rgba(255,255,255,0.72); display: block; margin-top: 1.5px; }
@@ -889,8 +902,8 @@ tbody td.c { text-align: center; }
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Market Watch</div><div class="rt">$17,493/pg</div><div class="tt">$157,437</div></div>
-    <div class="crm"><div class="blk c brand-grandmarnier"><span class="bb">Grand Marnier, Aperol</span><span class="bf">April – Grand Marnier &amp; Aperol</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
-    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Grand Marnier, Espolon</span><span class="bf">May – Mixology Agave: A Bold Way Forward</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
+    <div class="crm"><div class="blk c brand-multi brands-gm-aperol"><span class="bb">Grand Marnier, Aperol</span><span class="bf">April – Grand Marnier &amp; Aperol</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
+    <div class="crm"><div class="blk c brand-multi brands-gm-espolon"><span class="bb">Grand Marnier, Espolon</span><span class="bf">May – Mixology Agave: A Bold Way Forward</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
     <div class="crm"><div class="blk c brand-aperol"><span class="bb">Aperol</span><span class="bf">June – Bitters / Aperitifs</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
     <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon</span><span class="bf">July / August – Tequila Feature</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
     <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">September – Bourbon</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
@@ -909,7 +922,7 @@ tbody td.c { text-align: center; }
     <div class="crm"></div><div class="crm"></div><div class="crm"></div>
     <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon</span><span class="bf">Summer – Tequila Coverage</span><span class="ba">$17,170</span><span class="bn">1 pg · Summer</span></div></div>
     <div class="crm"></div>
-    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon, Wild Turkey</span><span class="bf">Fall – Bourbon Influence Abroad + Rye Innovations</span><span class="ba">$34,340</span><span class="bn">2 pgs · Fall</span></div></div>
+    <div class="crm"><div class="blk c brand-multi brands-espolon-wt"><span class="bb">Espolon, Wild Turkey</span><span class="bf">Fall – Bourbon Influence Abroad + Rye Innovations</span><span class="ba">$34,340</span><span class="bn">2 pgs · Fall</span></div></div>
     <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">Winter – Whisky of the Year / Top 20 Whiskies</span><span class="ba">$17,170</span><span class="bn">1 pg · Top 20</span></div></div>
     <div class="crm"></div>
   </div>
@@ -917,7 +930,7 @@ tbody td.c { text-align: center; }
     <div class="crl"><div class="nm">Wine Spectator</div><div class="rt">$34,731/pg</div><div class="tt">$104,193</div></div>
     <div class="crm"></div><div class="crm"></div>
     <div class="crm"><div class="blk c brand-aperol"><span class="bb">Aperol</span><span class="bf">June – Spritz Recipes from WS Award Winners</span><span class="ba">$34,731</span><span class="bn">1 pg · Spritz</span></div></div>
-    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon, Grand Marnier</span><span class="bf">July – Tequila: Blanco to Añejo &amp; Cristalino + Cocktails</span><span class="ba">$34,731</span><span class="bn">1 pg · Tequila</span></div></div>
+    <div class="crm"><div class="blk c brand-multi brands-espolon-gm"><span class="bb">Espolon, Grand Marnier</span><span class="bf">July – Tequila: Blanco to Añejo &amp; Cristalino + Cocktails</span><span class="ba">$34,731</span><span class="bn">1 pg · Tequila</span></div></div>
     <div class="crm"></div><div class="crm"></div>
     <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">November – 15 Aged Bourbon, Scotch &amp; Tequila in Wine Casks</span><span class="ba">$34,731</span><span class="bn">1 pg · Aged Spirits</span></div></div>
     <div class="crm"></div>
