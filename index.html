@@ -29,6 +29,9 @@
   --brand-wildturkey:  #6B4423;
   --brand-corporate:   #3A3A3A;
   --brand-category:    #5A5A5A;
+  /* Calendar block backgrounds (neutral so brand stripe stands out vs legend) */
+  --cal-confirmed-bg:  #404040;
+  --cal-tbd-bg:        #6B5B4F;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -291,9 +294,9 @@ tbody td.c { text-align: center; }
   justify-content: center;
 }
 .crm:last-child { border-right: none; }
-.blk { border-radius: 2px; padding: 6px 8px; line-height: 1.35; border-left: 4px solid rgba(0,0,0,0.2); min-height: 52px; }
-.blk.c { background: var(--red); }
-.blk.t { background: var(--tbd); }
+.blk { border-radius: 2px; padding: 6px 8px; line-height: 1.35; border-left: 4px solid rgba(0,0,0,0.3); min-height: 52px; }
+.blk.c { background: var(--cal-confirmed-bg); }
+.blk.t { background: var(--cal-tbd-bg); }
 /* Brand color stripe on calendar blocks */
 .blk.brand-aperol      { border-left-color: var(--brand-aperol); }
 .blk.brand-campari     { border-left-color: var(--brand-campari); }
@@ -933,8 +936,8 @@ tbody td.c { text-align: center; }
 </div>
 </div>
 <div class="legend">
-  <div class="li"><div class="ls c"></div>Confirmed placement</div>
-  <div class="li"><div class="ls t"></div>Budgeted · scheduling TBD</div>
+  <div class="li"><div class="ls" style="background:var(--cal-confirmed-bg);"></div>Confirmed placement</div>
+  <div class="li"><div class="ls" style="background:var(--cal-tbd-bg);"></div>Budgeted · scheduling TBD</div>
   <span style="color:var(--gray-md);font-size:8px;">|</span>
   <div class="li"><div class="ls" style="background:var(--brand-aperol);"></div>Aperol</div>
   <div class="li"><div class="ls" style="background:var(--brand-campari);"></div>Campari</div>
