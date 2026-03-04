@@ -20,6 +20,15 @@
   --gray-lt:  #E5E0D8;
   --rule:     #D4CEC6;
   --tbd:      #9E7A5A;
+  /* Brand colors for calendar */
+  --brand-aperol:      #E85D2B;
+  --brand-campari:     #C8102E;
+  --brand-courvoisier: #8B6914;
+  --brand-espolon:     #2D6B1C;
+  --brand-grandmarnier:#C9902E;
+  --brand-wildturkey:  #6B4423;
+  --brand-corporate:   #3A3A3A;
+  --brand-category:    #5A5A5A;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -164,7 +173,8 @@ body {
   line-height: 1.4;
   min-height: 26px;
 }
-.card.tbd .cn { color: var(--tbd); }
+/* TBD cards: header same style/weight as other cards; only amount/subtitle show TBD styling */
+.card.tbd .cn { color: var(--red-dk); font-weight: 600; }
 .card .cr { font-size: 8px; color: var(--gray-md); margin-top: 3px; }
 .card .ct {
   font-family: 'DM Sans', sans-serif;
@@ -275,10 +285,20 @@ tbody td.c { text-align: center; }
   justify-content: center;
 }
 .crm:last-child { border-right: none; }
-.blk { border-radius: 2px; padding: 5px 7px; line-height: 1.35; }
+.blk { border-radius: 2px; padding: 6px 8px; line-height: 1.35; border-left: 4px solid rgba(0,0,0,0.2); min-height: 52px; }
 .blk.c { background: var(--red); }
 .blk.t { background: var(--tbd); }
+/* Brand color stripe on calendar blocks */
+.blk.brand-aperol      { border-left-color: var(--brand-aperol); }
+.blk.brand-campari     { border-left-color: var(--brand-campari); }
+.blk.brand-courvoisier { border-left-color: var(--brand-courvoisier); }
+.blk.brand-espolon     { border-left-color: var(--brand-espolon); }
+.blk.brand-grandmarnier { border-left-color: var(--brand-grandmarnier); }
+.blk.brand-wildturkey  { border-left-color: var(--brand-wildturkey); }
+.blk.brand-corporate   { border-left-color: var(--brand-corporate); }
+.blk.brand-category    { border-left-color: var(--brand-category); }
 .blk .bb { font-weight: 600; font-size: 8.5px; color: rgba(255,255,255,0.95); display: block; }
+.blk .bf { font-size: 7px; color: rgba(255,255,255,0.8); display: block; margin-top: 2px; line-height: 1.25; }
 .blk .ba { font-size: 8px; color: rgba(255,255,255,0.72); display: block; margin-top: 1.5px; }
 .blk .bn { font-size: 7.5px; color: rgba(255,255,255,0.52); display: block; margin-top: 1px; }
 
@@ -851,57 +871,57 @@ tbody td.c { text-align: center; }
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Impact</div><div class="rt">$8,551/pg</div><div class="tt">$25,653</div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Bitters / Aperitifs</span><span class="ba">$8,551</span><span class="bn">1 pg</span></div></div>
+    <div class="crm"><div class="blk c brand-category"><span class="bb">Bitters / Aperitifs</span><span class="bf">April – Bitters / Aperitifs</span><span class="ba">$8,551</span><span class="bn">1 pg</span></div></div>
     <div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Tequila</span><span class="ba">$8,551</span><span class="bn">1 pg</span></div></div>
+    <div class="crm"><div class="blk c brand-category"><span class="bb">Tequila</span><span class="bf">June – Tequila</span><span class="ba">$8,551</span><span class="bn">1 pg</span></div></div>
     <div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Impact Seminar</span><span class="ba">$8,551</span><span class="bn">1 pg</span></div></div>
+    <div class="crm"><div class="blk c brand-category"><span class="bb">Impact Seminar</span><span class="bf">September – Impact Seminar</span><span class="ba">$8,551</span><span class="bn">1 pg</span></div></div>
     <div class="crm"></div><div class="crm"></div><div class="crm"></div>
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Market Watch</div><div class="rt">$17,493/pg</div><div class="tt">$157,437</div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Grand Marnier, Aperol</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Grand Marnier, Espolon</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Aperol</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Espolon</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Wild Turkey</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
+    <div class="crm"><div class="blk c brand-grandmarnier"><span class="bb">Grand Marnier, Aperol</span><span class="bf">April – Grand Marnier &amp; Aperol</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
+    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Grand Marnier, Espolon</span><span class="bf">May – Mixology Agave: A Bold Way Forward</span><span class="ba">$34,986</span><span class="bn">2 pgs</span></div></div>
+    <div class="crm"><div class="blk c brand-aperol"><span class="bb">Aperol</span><span class="bf">June – Bitters / Aperitifs</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
+    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon</span><span class="bf">July / August – Tequila Feature</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
+    <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">September – Bourbon</span><span class="ba">$17,493</span><span class="bn">1 pg</span></div></div>
     <div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Wild Turkey</span><span class="ba">$17,493</span><span class="bn">1 pg · OPOY</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Courvoisier</span><span class="ba">$17,493</span><span class="bn">1 pg · Holiday</span></div></div>
+    <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">November – Mixology Bourbon/Rye + On Premise Player of the Year</span><span class="ba">$17,493</span><span class="bn">1 pg · OPOY</span></div></div>
+    <div class="crm"><div class="blk c brand-courvoisier"><span class="bb">Courvoisier</span><span class="bf">December – Holiday / Gift</span><span class="ba">$17,493</span><span class="bn">1 pg · Holiday</span></div></div>
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">MW Leaders</div><div class="rt">$25,000 flat</div><div class="tt">$25,000</div></div>
     <div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Leaders Dinner</span><span class="ba">$25,000</span><span class="bn">Full pg + 3 tix</span></div></div>
+    <div class="crm"><div class="blk c brand-corporate"><span class="bb">Corporate</span><span class="bf">Leaders Issue + Dinner (Oct 8, Pierre Hotel) – Full Page + 3 Tickets</span><span class="ba">$25,000</span><span class="bn">Full pg + 3 tix</span></div></div>
     <div class="crm"></div><div class="crm"></div>
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Whisky Advocate</div><div class="rt">$17,170/pg</div><div class="tt">$68,680</div></div>
     <div class="crm"></div><div class="crm"></div><div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Espolon</span><span class="ba">$17,170</span><span class="bn">1 pg · Summer</span></div></div>
+    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon</span><span class="bf">Summer – Tequila Coverage</span><span class="ba">$17,170</span><span class="bn">1 pg · Summer</span></div></div>
     <div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Espolon, Wild Turkey</span><span class="ba">$34,340</span><span class="bn">2 pgs · Fall</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Wild Turkey</span><span class="ba">$17,170</span><span class="bn">1 pg · Top 20</span></div></div>
+    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon, Wild Turkey</span><span class="bf">Fall – Bourbon Influence Abroad + Rye Innovations</span><span class="ba">$34,340</span><span class="bn">2 pgs · Fall</span></div></div>
+    <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">Winter – Whisky of the Year / Top 20 Whiskies</span><span class="ba">$17,170</span><span class="bn">1 pg · Top 20</span></div></div>
     <div class="crm"></div>
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Wine Spectator</div><div class="rt">$34,731/pg</div><div class="tt">$104,193</div></div>
     <div class="crm"></div><div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Aperol</span><span class="ba">$34,731</span><span class="bn">1 pg · Spritz</span></div></div>
-    <div class="crm"><div class="blk c"><span class="bb">Espolon, Grand Marnier</span><span class="ba">$34,731</span><span class="bn">1 pg · Tequila</span></div></div>
+    <div class="crm"><div class="blk c brand-aperol"><span class="bb">Aperol</span><span class="bf">June – Spritz Recipes from WS Award Winners</span><span class="ba">$34,731</span><span class="bn">1 pg · Spritz</span></div></div>
+    <div class="crm"><div class="blk c brand-espolon"><span class="bb">Espolon, Grand Marnier</span><span class="bf">July – Tequila: Blanco to Añejo &amp; Cristalino + Cocktails</span><span class="ba">$34,731</span><span class="bn">1 pg · Tequila</span></div></div>
     <div class="crm"></div><div class="crm"></div>
-    <div class="crm"><div class="blk c"><span class="bb">Wild Turkey</span><span class="ba">$34,731</span><span class="bn">1 pg · Aged Spirits</span></div></div>
+    <div class="crm"><div class="blk c brand-wildturkey"><span class="bb">Wild Turkey</span><span class="bf">November – 15 Aged Bourbon, Scotch &amp; Tequila in Wine Casks</span><span class="ba">$34,731</span><span class="bn">1 pg · Aged Spirits</span></div></div>
     <div class="crm"></div>
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Shanken News Daily</div><div class="rt">$4,100/placement</div><div class="tt tbd">$28,700 · TBD</div></div>
-    <div class="crm"><div class="blk t"><span class="bb">Espolon 4×</span><span class="ba">$16,400</span><span class="bn">Dates TBD</span></div></div>
-    <div class="crm"><div class="blk t"><span class="bb">Campari 3×</span><span class="ba">$12,300</span><span class="bn">Dates TBD</span></div></div>
+    <div class="crm"><div class="blk t brand-espolon"><span class="bb">Espolon 4×</span><span class="bf">Espolon Programming Support</span><span class="ba">$16,400</span><span class="bn">Dates TBD</span></div></div>
+    <div class="crm"><div class="blk t brand-campari"><span class="bb">Campari 3×</span><span class="bf">Campari Programming Support</span><span class="ba">$12,300</span><span class="bn">Dates TBD</span></div></div>
     <div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div>
   </div>
   <div class="cal-row">
     <div class="crl"><div class="nm">Trade E-Blast</div><div class="rt">$5,000/blast</div><div class="tt tbd">$5,000 · TBD</div></div>
-    <div class="crm"><div class="blk t"><span class="bb">Espolon</span><span class="ba">$5,000</span><span class="bn">Date TBD</span></div></div>
+    <div class="crm"><div class="blk t brand-espolon"><span class="bb">Espolon</span><span class="bf">Espolon Dedicated Trade E-Blast (Market Watch)</span><span class="ba">$5,000</span><span class="bn">Date TBD</span></div></div>
     <div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div><div class="crm"></div>
   </div>
 </div>
@@ -909,6 +929,13 @@ tbody td.c { text-align: center; }
 <div class="legend">
   <div class="li"><div class="ls c"></div>Confirmed placement</div>
   <div class="li"><div class="ls t"></div>Budgeted · scheduling TBD</div>
+  <span style="color:var(--gray-md);font-size:8px;">|</span>
+  <div class="li"><div class="ls" style="background:var(--brand-aperol);"></div>Aperol</div>
+  <div class="li"><div class="ls" style="background:var(--brand-campari);"></div>Campari</div>
+  <div class="li"><div class="ls" style="background:var(--brand-courvoisier);"></div>Courvoisier</div>
+  <div class="li"><div class="ls" style="background:var(--brand-espolon);"></div>Espolon</div>
+  <div class="li"><div class="ls" style="background:var(--brand-grandmarnier);"></div>Grand Marnier</div>
+  <div class="li"><div class="ls" style="background:var(--brand-wildturkey);"></div>Wild Turkey</div>
 </div>
 </div><!-- /cal-page -->
 
