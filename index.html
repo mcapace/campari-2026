@@ -681,6 +681,39 @@ tbody td.c { text-align: center; }
 .inv-item.highlight .iv { color: var(--red); }
 .inv-item .is { font-size: 9px; color: #444; margin-top: 6px; line-height: 1.4; }
 
+/* ── ADDITIONAL INFORMATION (Q&A) ── */
+.additional-info-page {
+  break-before: always;
+  page-break-before: always;
+  padding-bottom: 24px;
+}
+.qa-cover {
+  background: var(--black);
+  padding: 40px 52px 36px;
+}
+.qa-cover .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.qa-cover h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--white); line-height: 1.15; }
+.qa-cover .sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 8px; }
+.qa-body-inner { padding: 32px 52px 40px; background: var(--white); }
+.qa-sec { margin-bottom: 28px; break-inside: avoid; page-break-inside: avoid; }
+.qa-sec:last-child { margin-bottom: 0; }
+.qa-sec h3 { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 600; color: var(--red-dk); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+.qa-sec .q { font-weight: 600; color: var(--gray-dk); font-size: 11px; margin-bottom: 6px; }
+.qa-sec .a { font-size: 11.5px; line-height: 1.65; color: var(--gray-dk); }
+.qa-sec .a p { margin-bottom: 8px; }
+.qa-sec .a p:last-child { margin-bottom: 0; }
+.qa-sec table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 10.5px; }
+.qa-sec th { text-align: left; padding: 6px 10px; background: var(--cream); font-weight: 600; color: var(--gray-dk); border: 1px solid var(--rule); }
+.qa-sec td { padding: 6px 10px; border: 1px solid var(--rule); color: var(--gray-dk); }
+.qa-sec ul { margin: 6px 0 0 18px; }
+.qa-sec li { margin-bottom: 3px; }
+.qa-sec .hub-examples { margin-top: 14px; padding: 14px; background: var(--cream); border-radius: 4px; border: 1px solid var(--rule); }
+.qa-sec .hub-examples .he-title { font-weight: 600; font-size: 11px; color: var(--gray-dk); margin-bottom: 10px; }
+.qa-sec .hub-examples a { color: var(--red-dk); font-weight: 500; text-decoration: none; }
+.qa-sec .hub-examples a:hover { text-decoration: underline; }
+.qa-sec .hub-examples .he-item { margin-bottom: 8px; font-size: 11px; }
+.qa-sec .hub-examples .he-item:last-child { margin-bottom: 0; }
+
 /* ── FOOTER ── */
 .doc-footer {
   border-top: 1px solid var(--rule);
@@ -816,7 +849,7 @@ tbody td.c { text-align: center; }
 </head>
 <body>
 <button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="Open print dialog to save as PDF">Print / Save as PDF</button>
-<a href="additional-information.html" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
+<a href="#additional-information" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
 <div class="page">
 
 <!-- ══════════════════════════════════════════
@@ -1291,9 +1324,96 @@ tbody td.c { text-align: center; }
   </div>
 </div>
 
+<div id="additional-information" class="additional-info-page">
+  <div class="qa-cover">
+    <div class="eyebrow">Appendix</div>
+    <h2>Additional Information</h2>
+    <p class="sub">Responses to Your Questions — Campari Group 2026 Program</p>
+  </div>
+  <div class="qa-body-inner">
+    <section class="qa-sec">
+      <h3>1. Audience profile across M. Shanken digital and print properties</h3>
+      <p class="q">Please provide background on the audience profile across the M. Shanken digital and print properties (e.g., trade vs. consumer, interests).</p>
+      <div class="a">
+        <p><strong>Consumer-focused properties</strong> (Wine Spectator, Whisky Advocate, Cigar Aficionado) reach affluent, educated consumers who are highly engaged with wine, spirits, and lifestyle content. Demographics are summarized below.</p>
+        <p><strong>Trade-focused properties</strong> (Impact, Market Watch, Shanken News Daily, Trade E-Blast) reach the three-tier trade: wholesalers, retailers, and on-premise operators. Impact and Market Watch are read by distributor and supplier executives, chain buyers, and independent retail/on-premise decision-makers for programming, distribution, and placement.</p>
+        <table>
+          <thead><tr><th>Property</th><th>Audience</th><th>Key demographics</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Wine Spectator</strong></td><td>Consumer</td><td>Avg HHI $377k · Avg age 47 · Net worth $2.7MM · 98% college grad · 95% willing to pay more for quality wine · 89% serve best food &amp; beverages when entertaining · 67% take foreign trips</td></tr>
+            <tr><td><strong>Whisky Advocate</strong></td><td>Consumer</td><td>Avg HHI $192k · Avg age 62 · Net worth $1.2MM · 84% college grad · 92% homeowners · 14x more likely to buy premium spirits · 93% take domestic trips</td></tr>
+            <tr><td><strong>Cigar Aficionado</strong></td><td>Consumer</td><td>Avg HHI $193k · Avg age 46 · Net worth $1.4MM · 97% college grad · 86% homeowners · 92% domestic trips · 81% serve best food &amp; beverages when entertaining</td></tr>
+            <tr><td><strong>Impact</strong></td><td>Trade</td><td>Wholesaler and supplier executives, retail and on-premise decision-makers; premium beverage alcohol trade.</td></tr>
+            <tr><td><strong>Market Watch</strong></td><td>Trade</td><td>Distributor and supplier leadership, chain and independent retail, on-premise operators; programming and placement focus.</td></tr>
+            <tr><td><strong>Shanken News Daily</strong></td><td>Trade</td><td>See question 2.</td></tr>
+            <tr><td><strong>Trade E-Blast</strong></td><td>Trade</td><td>See question 2.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="qa-sec">
+      <h3>2. Audience profile for Shanken News Daily and Trade Blasts</h3>
+      <p class="q">Please provide background on the audience profile for the M. Shanken Daily and Trade Blasts (e.g., trade vs. consumer, interests).</p>
+      <div class="a"><p>This is an <strong>all-trade audience</strong> composed of wholesalers, retailers, and on-premise operators.</p></div>
+    </section>
+    <section class="qa-sec">
+      <h3>3. Estimated reach of Daily and Trade Blasts</h3>
+      <p class="q">What is the estimated reach of the Daily and Trade Blasts?</p>
+      <div class="a"><p><strong>Shanken News Daily:</strong> 46,000</p><p><strong>Trade E-Blast:</strong> 40,000</p></div>
+    </section>
+    <section class="qa-sec">
+      <h3>4. Property or subscriber list for Daily and Trade Blasts</h3>
+      <p class="q">Which M. Shanken property or subscriber distribution list do the Daily and Trade Blasts deploy from?</p>
+      <div class="a"><p><strong>Shanken News Daily (SND):</strong> Direct subscribers to SND; deployed from the Shanken News Daily brand.</p><p><strong>Trade E-Blast:</strong> Opt-in subscribers to all trade communications; delivered from the M. Shanken brand.</p></div>
+    </section>
+    <section class="qa-sec">
+      <h3>5. Media plan proposal for the digital portion</h3>
+      <p class="q">Please share the media plan proposal for the digital portion of the recommendation.</p>
+      <div class="a">
+        <p>The digital recommendation is <strong>The Campari Collection</strong>: a custom branded hub at <strong>winespectator.com/campari</strong> and <strong>whiskyadvocate.com/campari</strong> (one hub, two destinations).</p>
+        <ul>
+          <li><strong>Activations:</strong> 8 seasonal activations over 9 months</li>
+          <li><strong>Investment:</strong> $110,337 (hub build, content, all drivers included)</li>
+          <li><strong>Drivers:</strong> Dedicated e-blasts (WS/WA subscriber lists), Paid Social (Instagram &amp; Facebook), Programmatic display, High-impact display on WS and WA</li>
+        </ul>
+        <p>Full creative calendar, activation details, and driver breakdown appear in the Digital Program section above.</p>
+        <div class="hub-examples">
+          <p class="he-title">What it could look like — live hub examples</p>
+          <p class="he-item"><strong>Wine Spectator:</strong> <a href="https://duckhorn.winespectator.com/" target="_blank" rel="noopener">duckhorn.winespectator.com</a> · The Duckhorn Collection (multi-brand wine portfolio)</p>
+          <p class="he-item"><strong>Wine Spectator:</strong> <a href="https://valdo.winespectator.com/" target="_blank" rel="noopener">valdo.winespectator.com</a> · Valdo Prosecco (Italian sparkling)</p>
+          <p class="he-item"><strong>Wine Spectator:</strong> <a href="https://visitarizona.winespectator.com/" target="_blank" rel="noopener">visitarizona.winespectator.com</a> · Visit Arizona (destination, wine &amp; travel)</p>
+          <p class="he-item"><strong>Whisky Advocate:</strong> <a href="https://highwest.whiskyadvocate.com/" target="_blank" rel="noopener">highwest.whiskyadvocate.com</a> · High West Distillery (craft whiskey)</p>
+          <p style="margin-top:10px;font-size:10.5px;color:var(--gray-md);">The Campari Collection will follow this same format: custom branded destination, seasonal content, and brand chapters—built for Campari at winespectator.com/campari and whiskyadvocate.com/campari.</p>
+        </div>
+      </div>
+    </section>
+    <section class="qa-sec">
+      <h3>6. Visual example of the hub</h3>
+      <p class="q">Could you please share a visual example of the hub executed for a similar brand portfolio?</p>
+      <div class="a">
+        <p>A visual example has been shared via attachment. You can also view <strong>live examples</strong> of the same hub format in the Media plan section above (Question 5): Duckhorn and Valdo on Wine Spectator, and High West on Whisky Advocate. The Campari Collection will follow this same model—custom branded, seasonal content, brand chapters—at winespectator.com/campari and whiskyadvocate.com/campari. We are happy to provide additional examples or schedule a walkthrough.</p>
+      </div>
+    </section>
+    <section class="qa-sec">
+      <h3>7. Impact Seminar</h3>
+      <p class="q">Please share more information on the Impact Seminar.</p>
+      <div class="a">
+        <p>The Impact Seminar is a global marketing conference attended by <strong>250–275 executives</strong> in the beverage alcohol industry, including:</p>
+        <ul>
+          <li>Wholesaler principals and executives</li>
+          <li>Supplier principals and sales and marketing executives</li>
+          <li>Retail owners</li>
+          <li>Financial industry executives</li>
+        </ul>
+        <p>There are typically <strong>six presentations</strong> on various topics, presented by selected industry executives (Campari has presented several times over the years). Following the seminars there is a lunch with a prominent speaker—usually a political or business leader, or occasionally a media personality. Past speakers have included President George W. Bush, Bill Clinton, Michael Milken, General David Petraeus, Bret Baier, and others.</p>
+      </div>
+    </section>
+  </div>
+</div>
+
 <div class="doc-footer">
   <span>Campari Group 2026 &nbsp;·&nbsp; M. Shanken Communications &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; Not for distribution</span>
-  <span><a href="additional-information.html" style="color:var(--red-dk);text-decoration:none;font-weight:500;">Additional Information (Q&A)</a> &nbsp;·&nbsp; Prepared March 2026</span>
+  <span><a href="#additional-information" style="color:var(--red-dk);text-decoration:none;font-weight:500;">Additional Information (Q&A)</a> &nbsp;·&nbsp; Prepared March 2026</span>
 </div>
 
 </div><!-- /page -->
