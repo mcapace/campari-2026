@@ -418,8 +418,12 @@ tbody td.c { text-align: center; }
 
 /* ── DIGITAL BODY ── */
 .dig-body { background: var(--cream); }
-.digital-media-plan-section { background: var(--white); padding: 0 52px 32px; border-top: 4px solid var(--red); }
-.digital-media-plan-section .dmplan-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--red-dk); padding: 24px 0 16px; margin: 0; }
+.digital-media-plan-page {
+  break-before: always;
+  page-break-before: always;
+  background: var(--white);
+  padding-bottom: 32px;
+}
 
 .big-idea {
   padding: 40px 52px 32px;
@@ -840,6 +844,10 @@ tbody td.c { text-align: center; }
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
+  .digital-media-plan-page {
+    break-before: always !important;
+    page-break-before: always !important;
+  }
 
   /* ── Section headers never orphan ── */
   .sec-hdr {
@@ -851,6 +859,7 @@ tbody td.c { text-align: center; }
 </head>
 <body>
 <button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="Open print dialog to save as PDF">Print / Save as PDF</button>
+<a href="#digital-media-plan" class="qa-link no-print" title="Jump to Digital Media Plan" style="right: 320px;">Digital Media Plan</a>
 <a href="#additional-information" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
 <div class="page">
 
@@ -1044,10 +1053,14 @@ tbody td.c { text-align: center; }
   </div>
 </div>
 
-<!-- Digital Media Plan -->
-<div class="digital-media-plan-section">
-  <h2 class="dmplan-title">Digital Media Plan</h2>
-  <div class="tbl-wrap" style="padding-top:0;">
+<!-- Digital Media Plan — dedicated page -->
+<div id="digital-media-plan" class="digital-media-plan-page">
+  <div class="sec-hdr" style="padding-top:32px;">
+    <div class="sec-num">02</div>
+    <h2>Digital Media Plan</h2>
+    <div class="rule"></div>
+  </div>
+  <div class="tbl-wrap">
 <table>
 <thead><tr>
   <th style="width:22%">Component</th>
