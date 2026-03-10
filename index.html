@@ -754,6 +754,22 @@ tbody td.c { text-align: center; }
 .print-pdf-btn:active {
   transform: scale(0.98);
 }
+.print-hint {
+  position: fixed;
+  top: 52px;
+  right: 20px;
+  z-index: 9998;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: var(--gray-md);
+  background: var(--white);
+  padding: 6px 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  max-width: 220px;
+  line-height: 1.4;
+}
+.print-hint strong { color: var(--red-dk); }
 .qa-link {
   position: fixed;
   top: 16px;
@@ -858,7 +874,8 @@ tbody td.c { text-align: center; }
 </style>
 </head>
 <body>
-<button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="Open print dialog to save as PDF">Print / Save as PDF</button>
+<button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="In the dialog, choose 'Save as PDF' and set Pages to 'All' to get the full deck.">Print / Save as PDF</button>
+<div class="print-hint no-print" title="Required to get all pages including Digital Media Plan">Save as PDF: use <strong>Pages → All</strong> to include the full deck.</div>
 <a href="#digital-media-plan" class="qa-link no-print" title="Jump to Digital Media Plan" style="right: 320px;">Digital Media Plan</a>
 <a href="#additional-information" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
 <div class="page">
