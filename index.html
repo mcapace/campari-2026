@@ -715,6 +715,22 @@ tbody td.c { text-align: center; }
 .print-pdf-btn:active {
   transform: scale(0.98);
 }
+.qa-link {
+  position: fixed;
+  top: 16px;
+  right: 180px;
+  z-index: 9999;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--gray-dk);
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.qa-link:hover { background: var(--off-black); color: var(--white); }
 
 @media print {
   .no-print { display: none !important; }
@@ -800,6 +816,7 @@ tbody td.c { text-align: center; }
 </head>
 <body>
 <button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="Open print dialog to save as PDF">Print / Save as PDF</button>
+<a href="additional-information.html" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
 <div class="page">
 
 <!-- ══════════════════════════════════════════
@@ -1276,7 +1293,7 @@ tbody td.c { text-align: center; }
 
 <div class="doc-footer">
   <span>Campari Group 2026 &nbsp;·&nbsp; M. Shanken Communications &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; Not for distribution</span>
-  <span>Prepared March 2026</span>
+  <span><a href="additional-information.html" style="color:var(--red-dk);text-decoration:none;font-weight:500;">Additional Information (Q&A)</a> &nbsp;·&nbsp; Prepared March 2026</span>
 </div>
 
 </div><!-- /page -->
