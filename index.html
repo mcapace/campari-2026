@@ -424,6 +424,19 @@ tbody td.c { text-align: center; }
   background: var(--white);
   padding-bottom: 32px;
 }
+.media-plan-detail-page {
+  break-before: always;
+  page-break-before: always;
+  background: var(--white);
+  padding-bottom: 32px;
+}
+.media-plan-detail-page .tbl-wrap { padding: 0 52px 28px; }
+.media-plan-detail-page .intro-note { font-size: 11px; color: var(--gray-dk); line-height: 1.5; padding: 0 52px 16px; margin: 0; }
+.media-plan-detail-page table { font-size: 10px; }
+.media-plan-detail-page thead th { padding: 6px 8px; font-size: 7.5px; }
+.media-plan-detail-page tbody td { padding: 5px 8px; }
+.media-plan-detail-page .r { text-align: right; }
+.media-plan-detail-page .c { text-align: center; }
 
 .big-idea {
   padding: 40px 52px 32px;
@@ -860,7 +873,8 @@ tbody td.c { text-align: center; }
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
-  .digital-media-plan-page {
+  .digital-media-plan-page,
+  .media-plan-detail-page {
     break-before: always !important;
     page-break-before: always !important;
   }
@@ -877,6 +891,7 @@ tbody td.c { text-align: center; }
 <button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="In the dialog, choose 'Save as PDF' and set Pages to 'All' to get the full deck.">Print / Save as PDF</button>
 <div class="print-hint no-print" title="Required to get all pages including Digital Media Plan">Save as PDF: use <strong>Pages → All</strong> to include the full deck.</div>
 <a href="#digital-media-plan" class="qa-link no-print" title="Jump to Digital Media Plan" style="right: 320px;">Digital Media Plan</a>
+<a href="#digital-media-plan-detail" class="qa-link no-print" title="Rates, units, budget, R/F" style="right: 468px;">Rates &amp; Budget</a>
 <a href="#additional-information" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
 <div class="page">
 
@@ -1095,6 +1110,38 @@ tbody td.c { text-align: center; }
 </tbody>
 </table>
 </div>
+</div>
+
+<!-- Digital Media Plan — Detailed (rates, units, budget, R/F) — per client request -->
+<div id="digital-media-plan-detail" class="media-plan-detail-page">
+  <div class="sec-hdr" style="padding-top:32px;">
+    <div class="sec-num">02</div>
+    <h2>Digital Media Plan — Rates, Units &amp; Budget</h2>
+    <div class="rule"></div>
+  </div>
+  <p class="intro-note">In response to your request: below is the digital offering laid out with rates, allocated budget, units, and reach/frequency where applicable. Exact rates and delivery estimates can be confirmed with your M. Shanken account team.</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th style="width:14%">Line</th>
+        <th style="width:24%">Description</th>
+        <th class="c" style="width:10%">Units</th>
+        <th class="r" style="width:10%">Rate</th>
+        <th class="r" style="width:11%">Alloc. Budget</th>
+        <th style="width:18%">Reach / Frequency</th>
+        <th style="width:13%">Notes</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Hub build &amp; content</td><td>Design, development, hosting, content production, campaign management</td><td class="c">1</td><td class="r">$28,000</td><td class="r">$28,000</td><td>—</td><td>One-time; WS + WA</td></tr>
+        <tr><td>Activation production</td><td>Creative &amp; content per activation (8)</td><td class="c">8</td><td class="r">$2,000</td><td class="r">$16,000</td><td>—</td><td>Per activation</td></tr>
+        <tr><td>Dedicated e-blasts</td><td>Activation-specific sends to WS / WA subscriber lists</td><td class="c">12</td><td class="r">$2,500</td><td class="r">$30,000</td><td>Reach ~40–46k per send (list-dependent); Freq 1</td><td>Blended WS/WA</td></tr>
+        <tr><td>Paid social</td><td>Instagram &amp; Facebook; seasonal creative, amplification</td><td class="c">~3M impr.</td><td class="r">$6 CPM</td><td class="r">$18,000</td><td>Reach ~1.2M; Freq ~2.5</td><td>By activation</td></tr>
+        <tr><td>Programmatic display</td><td>Open web; retargeting; activation segments</td><td class="c">~2.4M impr.</td><td class="r">$5 CPM</td><td class="r">$12,000</td><td>Reach ~800k; Freq ~3</td><td>Optimized ongoing</td></tr>
+        <tr><td>High-impact display</td><td>Roadblocks, premium placements, newsletter sponsorships on WS/WA</td><td class="c">Placement</td><td class="r">Var.</td><td class="r">$6,337</td><td>By placement</td><td>Timed to activations</td></tr>
+        <tr class="gnd"><td colspan="4" style="letter-spacing:.08em;text-transform:uppercase;font-size:9px;">Total digital investment</td><td class="r">$110,337</td><td colspan="2"></td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <div class="dig-body" style="padding-top:0;">
@@ -1439,7 +1486,7 @@ tbody td.c { text-align: center; }
             <tr><td colspan="2" style="font-weight:600;">Total digital investment</td><td>$110,337</td></tr>
           </tbody>
         </table>
-        <p style="margin-top:12px;">Full creative calendar, activation details, and driver breakdown appear in the <strong>Digital Program</strong> section above.</p>
+        <p style="margin-top:12px;">A detailed media plan with <strong>rates, allocated budget, units, and reach/frequency</strong> is provided on the dedicated page <strong>Digital Media Plan — Rates, Units &amp; Budget</strong> (in the main deck, after the Digital Media Plan summary). Full creative calendar, activation details, and driver breakdown appear in the <strong>Digital Program</strong> section above.</p>
         <div class="hub-examples">
           <p class="he-title">What it could look like — live hub examples</p>
           <p class="he-item"><strong>Wine Spectator:</strong> <a href="https://duckhorn.winespectator.com/" target="_blank" rel="noopener">duckhorn.winespectator.com</a> · The Duckhorn Collection (multi-brand wine portfolio)</p>
