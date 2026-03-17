@@ -715,34 +715,36 @@ tbody td.c { text-align: center; }
 .program-summary .ps-cover .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
 .program-summary .ps-cover h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--white); line-height: 1.15; }
 .program-summary .ps-cover .sub { font-size: 11px; color: rgba(255,255,255,0.65); margin-top: 6px; }
+.program-summary .ps-body { padding: 0 52px 0; }
 .program-summary .ps-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  padding: 0 52px;
+  margin: 0;
   background: var(--rule);
   border: 1px solid var(--rule);
 }
+.program-summary .ps-grid + .ps-grid { margin-top: 20px; }
 .program-summary .ps-cell {
   background: var(--white);
-  padding: 20px 18px;
+  padding: 18px 20px;
   break-inside: avoid;
   page-break-inside: avoid;
 }
 .program-summary .ps-cell.ps-label { font-size: 8.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-md); }
 .program-summary .ps-cell.ps-value { font-family: 'DM Sans', sans-serif; font-size: 22px; font-weight: 700; color: var(--black); font-variant-numeric: tabular-nums; }
 .program-summary .ps-cell.ps-value.highlight { color: var(--red); }
-.program-summary .ps-cell.ps-note { font-size: 9px; color: var(--gray-md); margin-top: 4px; line-height: 1.4; }
+.program-summary .ps-cell.ps-note { font-size: 9px; color: var(--gray-md); margin-top: 6px; line-height: 1.4; }
 .program-summary .ps-reach {
-  padding: 24px 52px 0;
-  margin-top: 0;
+  padding: 24px 0 0;
+  margin: 0;
 }
 .program-summary .ps-reach h4 { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
 .program-summary .ps-reach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.program-summary .ps-reach-item { background: var(--cream); border: 1px solid var(--rule); padding: 14px 18px; }
+.program-summary .ps-reach-item { background: var(--cream); border: 1px solid var(--rule); padding: 18px 20px; }
 .program-summary .ps-reach-item .label { font-size: 9px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-md); }
-.program-summary .ps-reach-item .value { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--black); margin-top: 4px; font-variant-numeric: tabular-nums; }
-.program-summary .ps-reach-item .detail { font-size: 10px; color: var(--gray-dk); margin-top: 6px; line-height: 1.5; }
+.program-summary .ps-reach-item .value { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 700; color: var(--black); margin-top: 6px; font-variant-numeric: tabular-nums; }
+.program-summary .ps-reach-item .detail { font-size: 10px; color: var(--gray-dk); margin-top: 8px; line-height: 1.5; }
 
 /* ── INVESTMENT SUMMARY ── */
 .invest-summary {
@@ -1528,48 +1530,50 @@ tbody td.c { text-align: center; }
     <h2>Program Summary</h2>
     <p class="sub">Campari Group 2026 · Print + Digital · April – December</p>
   </div>
-  <div class="ps-grid">
-    <div class="ps-cell ps-label">Total investment</div>
-    <div class="ps-cell ps-label">Print</div>
-    <div class="ps-cell ps-label">Digital (Campari cost)</div>
-    <div class="ps-cell ps-label">Digital actual value</div>
-    <div class="ps-cell ps-value highlight">$525,000</div>
-    <div class="ps-cell ps-value">$414,663</div>
-    <div class="ps-cell ps-value">$110,337</div>
-    <div class="ps-cell ps-value">$136,950</div>
-    <div class="ps-cell ps-note">Print + Digital</div>
-    <div class="ps-cell ps-note">7 publications</div>
-    <div class="ps-cell ps-note">8 activations, all drivers</div>
-    <div class="ps-cell ps-note">Package discount</div>
-  </div>
-  <div class="ps-reach">
-    <h4>Reach &amp; impressions</h4>
-    <div class="ps-reach-grid">
-      <div class="ps-reach-item">
-        <div class="label">Digital (The Campari Collection)</div>
-        <div class="value">2.619MM</div>
-        <div class="detail">Total reach across 8 activations (e-blasts, paid social, PMP, display)</div>
-      </div>
-      <div class="ps-reach-item">
-        <div class="label">Print / trade</div>
-        <div class="value">46K + 40K</div>
-        <div class="detail">Shanken News Daily 46,000 · Trade E-Blast 40,000</div>
+  <div class="ps-body">
+    <div class="ps-grid">
+      <div class="ps-cell ps-label">Total investment</div>
+      <div class="ps-cell ps-label">Print</div>
+      <div class="ps-cell ps-label">Digital (Campari cost)</div>
+      <div class="ps-cell ps-label">Digital actual value</div>
+      <div class="ps-cell ps-value highlight">$525,000</div>
+      <div class="ps-cell ps-value">$414,663</div>
+      <div class="ps-cell ps-value">$110,337</div>
+      <div class="ps-cell ps-value">$136,950</div>
+      <div class="ps-cell ps-note">Print + Digital</div>
+      <div class="ps-cell ps-note">7 publications</div>
+      <div class="ps-cell ps-note">8 activations, all drivers</div>
+      <div class="ps-cell ps-note">Package discount</div>
+    </div>
+    <div class="ps-reach">
+      <h4>Reach &amp; impressions</h4>
+      <div class="ps-reach-grid">
+        <div class="ps-reach-item">
+          <div class="label">Digital (The Campari Collection)</div>
+          <div class="value">2.619MM</div>
+          <div class="detail">Total reach across 8 activations (e-blasts, paid social, PMP, display)</div>
+        </div>
+        <div class="ps-reach-item">
+          <div class="label">Print / trade</div>
+          <div class="value">46K + 40K</div>
+          <div class="detail">Shanken News Daily 46,000 · Trade E-Blast 40,000</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="ps-grid" style="margin-top:20px;">
-    <div class="ps-cell ps-label">Activations</div>
-    <div class="ps-cell ps-label">Months active</div>
-    <div class="ps-cell ps-label">Publications</div>
-    <div class="ps-cell ps-label">Driver channels (digital)</div>
-    <div class="ps-cell ps-value">8</div>
-    <div class="ps-cell ps-value">9</div>
-    <div class="ps-cell ps-value">7</div>
-    <div class="ps-cell ps-value">4</div>
-    <div class="ps-cell ps-note">Seasonal digital</div>
-    <div class="ps-cell ps-note">Apr – Dec 2026</div>
-    <div class="ps-cell ps-note">Impact, MW, WA, WS, SND, Trade</div>
-    <div class="ps-cell ps-note">E-blast, social, PMP, display</div>
+    <div class="ps-grid">
+      <div class="ps-cell ps-label">Activations</div>
+      <div class="ps-cell ps-label">Months active</div>
+      <div class="ps-cell ps-label">Publications</div>
+      <div class="ps-cell ps-label">Driver channels (digital)</div>
+      <div class="ps-cell ps-value">8</div>
+      <div class="ps-cell ps-value">9</div>
+      <div class="ps-cell ps-value">7</div>
+      <div class="ps-cell ps-value">4</div>
+      <div class="ps-cell ps-note">Seasonal digital</div>
+      <div class="ps-cell ps-note">Apr – Dec 2026</div>
+      <div class="ps-cell ps-note">Impact, MW, WA, WS, SND, Trade</div>
+      <div class="ps-cell ps-note">E-blast, social, PMP, display</div>
+    </div>
   </div>
 </div>
 
