@@ -438,6 +438,31 @@ tbody td.c { text-align: center; }
 .media-plan-detail-page .r { text-align: right; }
 .media-plan-detail-page .c { text-align: center; }
 
+/* Full Media Plan — single page print + digital */
+.full-media-plan-page {
+  break-before: always;
+  page-break-before: always;
+  background: var(--white);
+  padding-bottom: 28px;
+}
+.full-media-plan-page .tbl-wrap { padding: 0 52px 20px; }
+.full-media-plan-page .plan-subh {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  padding: 20px 52px 8px;
+  margin: 0;
+}
+.full-media-plan-page .plan-subh:first-of-type { padding-top: 8px; }
+.full-media-plan-page table { font-size: 9.5px; }
+.full-media-plan-page thead th { padding: 5px 6px; font-size: 7px; }
+.full-media-plan-page tbody td { padding: 4px 6px; }
+.full-media-plan-page .r { text-align: right; }
+.full-media-plan-page .c { text-align: center; }
+.full-media-plan-page .gnd-total td { font-size: 11px; padding: 10px 6px; }
+
 .big-idea {
   padding: 40px 52px 32px;
   background: var(--white);
@@ -874,7 +899,8 @@ tbody td.c { text-align: center; }
     page-break-inside: avoid !important;
   }
   .digital-media-plan-page,
-  .media-plan-detail-page {
+  .media-plan-detail-page,
+  .full-media-plan-page {
     break-before: always !important;
     page-break-before: always !important;
   }
@@ -890,9 +916,8 @@ tbody td.c { text-align: center; }
 <body>
 <button type="button" class="print-pdf-btn no-print" onclick="window.print()" title="In the dialog, choose 'Save as PDF' and set Pages to 'All' to get the full deck.">Print / Save as PDF</button>
 <div class="print-hint no-print" title="Required to get all pages including Digital Media Plan">Save as PDF: use <strong>Pages → All</strong> to include the full deck.</div>
-<a href="#digital-media-plan" class="qa-link no-print" title="Jump to Digital Media Plan" style="right: 320px;">Digital Media Plan</a>
-<a href="#digital-media-plan-detail" class="qa-link no-print" title="Rates, units, budget, R/F" style="right: 468px;">Rates &amp; Budget</a>
-<a href="#additional-information" class="qa-link no-print" title="Responses to Eileen's questions">Additional Information (Q&A)</a>
+<a href="#full-media-plan" class="qa-link no-print" title="Full media plan — print &amp; digital">Full Media Plan</a>
+<a href="#additional-information" class="qa-link no-print" title="Responses to Eileen's questions" style="right: 320px;">Additional Information (Q&A)</a>
 <div class="page">
 
 <!-- ══════════════════════════════════════════
@@ -1085,60 +1110,57 @@ tbody td.c { text-align: center; }
   </div>
 </div>
 
-<!-- Digital Media Plan — dedicated page -->
-<div id="digital-media-plan" class="digital-media-plan-page">
+<!-- Full Media Plan — Print & Digital (one page) -->
+<div id="full-media-plan" class="full-media-plan-page">
   <div class="sec-hdr" style="padding-top:32px;">
-    <div class="sec-num">02</div>
-    <h2>Digital Media Plan</h2>
+    <div class="sec-num">01 / 02</div>
+    <h2>Full Media Plan — Print &amp; Digital Deliverables</h2>
     <div class="rule"></div>
   </div>
+  <p class="plan-subh">Print</p>
   <div class="tbl-wrap">
-<table>
-<thead><tr>
-  <th style="width:22%">Component</th>
-  <th>Description</th>
-  <th class="r" style="width:100px">Investment</th>
-</tr></thead>
-<tbody>
-  <tr><td>Hub build &amp; content</td><td>Custom branded destination on Wine Spectator and Whisky Advocate; design, development, hosting, content production, campaign management</td><td class="r">Included</td></tr>
-  <tr><td>Seasonal activations</td><td>8 activations over 9 months (Apr–Dec); each with dedicated hub chapter, creative, and drivers</td><td class="r">Included</td></tr>
-  <tr><td>Dedicated e-blasts</td><td>Activation-specific sends to Wine Spectator and/or Whisky Advocate subscriber lists</td><td class="r">Included</td></tr>
-  <tr><td>Paid social</td><td>Instagram &amp; Facebook; seasonal creative, lookalike and interest-based amplification</td><td class="r">Included</td></tr>
-  <tr><td>Programmatic display</td><td>Open web targeting; retargeting of hub visitors; segments by activation (tequila, bourbon, gift, etc.)</td><td class="r">Included</td></tr>
-  <tr><td>High-impact display</td><td>Roadblocks and premium placements on WineSpectator.com and WhiskyAdvocate.com; newsletter sponsorships</td><td class="r">Included</td></tr>
-  <tr class="gnd"><td colspan="2" style="letter-spacing:.08em;text-transform:uppercase;font-size:9.5px;">Total digital investment</td><td class="r">$110,337</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<!-- Digital Media Plan — Detailed (rates, units, budget, R/F) — per client request -->
-<div id="digital-media-plan-detail" class="media-plan-detail-page">
-  <div class="sec-hdr" style="padding-top:32px;">
-    <div class="sec-num">02</div>
-    <h2>Digital Media Plan — Rates, Units &amp; Budget</h2>
-    <div class="rule"></div>
+    <table>
+      <thead><tr>
+        <th style="width:16%">Publication</th>
+        <th style="width:38%">Description / Issue</th>
+        <th class="c" style="width:8%">Units</th>
+        <th class="r" style="width:12%">Rate</th>
+        <th class="r" style="width:12%">Budget</th>
+        <th style="width:14%">R/F</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Impact</td><td>Bitters/Aperitifs, Tequila, Impact Seminar</td><td class="c">3 pgs</td><td class="r">$8,551/pg</td><td class="r">$25,653</td><td>—</td></tr>
+        <tr><td>Market Watch</td><td>Apr–Dec placements (GM+Aperol, Agave, Aperol, Espolon, WT Bourbon, WT OPOY, Courvoisier Holiday)</td><td class="c">9 pgs</td><td class="r">$17,493/pg</td><td class="r">$157,437</td><td>—</td></tr>
+        <tr><td>MW Leaders</td><td>Leaders Issue + Dinner (Oct 8, Pierre Hotel) — Full Page + 3 Tickets</td><td class="c">1</td><td class="r">$25,000</td><td class="r">$25,000</td><td>—</td></tr>
+        <tr><td>Whisky Advocate</td><td>Summer Tequila; Fall Bourbon/Rye; Winter Top 20</td><td class="c">4 pgs</td><td class="r">$17,170/pg</td><td class="r">$68,680</td><td>—</td></tr>
+        <tr><td>Wine Spectator</td><td>June Spritz; July Tequila; Nov Aged Spirits</td><td class="c">3 pgs</td><td class="r">$34,731/pg</td><td class="r">$104,193</td><td>—</td></tr>
+        <tr><td>Shanken News Daily</td><td>Espolon 4×, Campari 3× — Programming support</td><td class="c">7 plc.</td><td class="r">$4,100/plc.</td><td class="r">$28,700</td><td>46k reach</td></tr>
+        <tr><td>Trade E-Blast</td><td>Espolon Dedicated Trade E-Blast (Market Watch)</td><td class="c">1 blast</td><td class="r">$5,000</td><td class="r">$5,000</td><td>40k reach</td></tr>
+        <tr class="gnd"><td colspan="4" style="letter-spacing:.08em;text-transform:uppercase;font-size:9px;">Print total</td><td class="r">$414,663</td><td></td></tr>
+      </tbody>
+    </table>
   </div>
-  <p class="intro-note">In response to your request: below is the digital offering laid out with rates, allocated budget, units, and reach/frequency where applicable. Exact rates and delivery estimates can be confirmed with your M. Shanken account team.</p>
+  <p class="plan-subh">Digital — The Campari Collection (winespectator.com/campari, whiskyadvocate.com/campari)</p>
   <div class="tbl-wrap">
     <table>
       <thead><tr>
         <th style="width:14%">Line</th>
-        <th style="width:24%">Description</th>
-        <th class="c" style="width:10%">Units</th>
-        <th class="r" style="width:10%">Rate</th>
-        <th class="r" style="width:11%">Alloc. Budget</th>
-        <th style="width:18%">Reach / Frequency</th>
-        <th style="width:13%">Notes</th>
+        <th style="width:26%">Description</th>
+        <th class="c" style="width:9%">Units</th>
+        <th class="r" style="width:9%">Rate</th>
+        <th class="r" style="width:10%">Budget</th>
+        <th style="width:20%">Reach / Frequency</th>
+        <th style="width:12%">Notes</th>
       </tr></thead>
       <tbody>
-        <tr><td>Hub build &amp; content</td><td>Design, development, hosting, content production, campaign management</td><td class="c">1</td><td class="r">$28,000</td><td class="r">$28,000</td><td>—</td><td>One-time; WS + WA</td></tr>
-        <tr><td>Activation production</td><td>Creative &amp; content per activation (8)</td><td class="c">8</td><td class="r">$2,000</td><td class="r">$16,000</td><td>—</td><td>Per activation</td></tr>
-        <tr><td>Dedicated e-blasts</td><td>Activation-specific sends to WS / WA subscriber lists</td><td class="c">12</td><td class="r">$2,500</td><td class="r">$30,000</td><td>Reach ~40–46k per send (list-dependent); Freq 1</td><td>Blended WS/WA</td></tr>
-        <tr><td>Paid social</td><td>Instagram &amp; Facebook; seasonal creative, amplification</td><td class="c">~3M impr.</td><td class="r">$6 CPM</td><td class="r">$18,000</td><td>Reach ~1.2M; Freq ~2.5</td><td>By activation</td></tr>
-        <tr><td>Programmatic display</td><td>Open web; retargeting; activation segments</td><td class="c">~2.4M impr.</td><td class="r">$5 CPM</td><td class="r">$12,000</td><td>Reach ~800k; Freq ~3</td><td>Optimized ongoing</td></tr>
-        <tr><td>High-impact display</td><td>Roadblocks, premium placements, newsletter sponsorships on WS/WA</td><td class="c">Placement</td><td class="r">Var.</td><td class="r">$6,337</td><td>By placement</td><td>Timed to activations</td></tr>
-        <tr class="gnd"><td colspan="4" style="letter-spacing:.08em;text-transform:uppercase;font-size:9px;">Total digital investment</td><td class="r">$110,337</td><td colspan="2"></td></tr>
+        <tr><td>Hub build &amp; content</td><td>Design, dev, hosting, content, campaign management</td><td class="c">1</td><td class="r">$28,000</td><td class="r">$28,000</td><td>—</td><td>WS + WA</td></tr>
+        <tr><td>Activation production</td><td>Creative &amp; content per activation (8)</td><td class="c">8</td><td class="r">$2,000</td><td class="r">$16,000</td><td>—</td><td>—</td></tr>
+        <tr><td>Dedicated e-blasts</td><td>Activation sends to WS/WA subscriber lists</td><td class="c">12</td><td class="r">$2,500</td><td class="r">$30,000</td><td>~40–46k/send; Freq 1</td><td>—</td></tr>
+        <tr><td>Paid social</td><td>Instagram &amp; Facebook; seasonal amplification</td><td class="c">~3M impr.</td><td class="r">$6 CPM</td><td class="r">$18,000</td><td>Reach ~1.2M; Freq ~2.5</td><td>—</td></tr>
+        <tr><td>Programmatic display</td><td>Open web; retargeting; activation segments</td><td class="c">~2.4M impr.</td><td class="r">$5 CPM</td><td class="r">$12,000</td><td>Reach ~800k; Freq ~3</td><td>—</td></tr>
+        <tr><td>High-impact display</td><td>Roadblocks, premium placements, newsletter on WS/WA</td><td class="c">Var.</td><td class="r">Var.</td><td class="r">$6,337</td><td>By placement</td><td>—</td></tr>
+        <tr class="gnd"><td colspan="4" style="letter-spacing:.08em;text-transform:uppercase;font-size:9px;">Digital total</td><td class="r">$110,337</td><td colspan="2"></td></tr>
+        <tr class="gnd gnd-total"><td colspan="4" style="letter-spacing:.08em;text-transform:uppercase;font-size:10px;">Total 2026 investment (print + digital)</td><td class="r" style="font-size:18px;">$525,000</td><td colspan="2"></td></tr>
       </tbody>
     </table>
   </div>
@@ -1486,7 +1508,7 @@ tbody td.c { text-align: center; }
             <tr><td colspan="2" style="font-weight:600;">Total digital investment</td><td>$110,337</td></tr>
           </tbody>
         </table>
-        <p style="margin-top:12px;">A detailed media plan with <strong>rates, allocated budget, units, and reach/frequency</strong> is provided on the dedicated page <strong>Digital Media Plan — Rates, Units &amp; Budget</strong> (in the main deck, after the Digital Media Plan summary). Full creative calendar, activation details, and driver breakdown appear in the <strong>Digital Program</strong> section above.</p>
+        <p style="margin-top:12px;">A single <strong>Full Media Plan</strong> page in this deck outlines all print and digital deliverables with <strong>rates, allocated budget, units, and reach/frequency</strong> (see <strong>Full Media Plan — Print &amp; Digital Deliverables</strong>). Full creative calendar, activation details, and driver breakdown appear in the <strong>Digital Program</strong> section above.</p>
         <div class="hub-examples">
           <p class="he-title">What it could look like — live hub examples</p>
           <p class="he-item"><strong>Wine Spectator:</strong> <a href="https://duckhorn.winespectator.com/" target="_blank" rel="noopener">duckhorn.winespectator.com</a> · The Duckhorn Collection (multi-brand wine portfolio)</p>
